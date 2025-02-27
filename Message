@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <script>
+        function checkName() {
+            var name = document.getElementById("nameInput").value.toLowerCase();
+            var validNames = ["john", "sarah", "michael"]; // Change this list
+
+            if (validNames.includes(name)) {
+                window.location.href = name + ".html"; // Redirect to personalized page
+            } else {
+                alert("Name not recognized. Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Your First Name</h2>
+    <input type="text" id="nameInput" placeholder="Type your name">
+    <button onclick="checkName()">Submit</button>
+</body>
+</html>
